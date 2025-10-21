@@ -7,8 +7,8 @@
 cell *create_cell(int arrival_vertex, float probability) {
     cell *new_cell = (cell *)malloc(sizeof(cell));
     if (new_cell == NULL) {
-        perror("Failed to allocate memory for cell");
-        exit(EXIT_FAILURE);
+        printf("memory error for cell");
+        exit(1);
     }
     new_cell->arrival_vertex = arrival_vertex;
     new_cell->probability = probability;
@@ -19,8 +19,8 @@ cell *create_cell(int arrival_vertex, float probability) {
 list *create_empty_list() {
     list *new_list = (list *)malloc(sizeof(list));
     if (new_list == NULL) {
-        perror("Failed to allocate memory for list");
-        exit(EXIT_FAILURE);
+        printf("memory error for list");
+        exit(1);
     }
     new_list->head = NULL;
     return new_list;
@@ -44,15 +44,15 @@ void display_list(list *l) {
 adjacency_list *create_empty_adjacency_list(int nb_vertices) {
     adjacency_list *adj_list = (adjacency_list *)malloc(sizeof(adjacency_list));
     if (adj_list == NULL) {
-        perror("Failed to allocate memory for adjacency list");
-        exit(EXIT_FAILURE);
+        printf("memory error for adjacency list");
+        exit(1);
     }
     adj_list->nb_vertices = nb_vertices;
     adj_list->lists = (list *)malloc(nb_vertices * sizeof(list));
     if (adj_list->lists == NULL) {
-        perror("Failed to allocate memory for lists in adjacency list");
+        printf("memory error adjacency list");
         free(adj_list);
-        exit(EXIT_FAILURE);
+        exit(1);
     }
     for (int i = 0; i < nb_vertices; i++) {
         adj_list->lists[i].head = NULL; 
@@ -63,7 +63,7 @@ adjacency_list *create_empty_adjacency_list(int nb_vertices) {
 void display_adjacency_list(adjacency_list *adj_list) {
     printf("Adjacency List:\n");
     for (int i = 0; i < adj_list->nb_vertices; i++) {
-        printf("List for vertex %d: ", i + 1);
+        printf("list of vertex %d: ", i + 1);
         display_list(&adj_list->lists[i]);
     }
 }

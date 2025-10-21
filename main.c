@@ -2,14 +2,12 @@
 #include "hasse.h"
 
 int main() {
-    printf("Hello, Markov Graph Project!\n");
-
     const char *filename = "data/exemple1.txt";
     adjacency_list *graph = readGraph(filename);
 
     if (graph == NULL) {
-        fprintf(stderr, "Failed to read graph from %s\n", filename);
-        return EXIT_FAILURE;
+        printf("error reading file\n");
+        return 1;
     }
 
     display_adjacency_list(graph);

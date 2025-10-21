@@ -8,14 +8,14 @@ adjacency_list *readGraph(const char *filename) {
     adjacency_list *adj_list = NULL;
 
     if (file == NULL) {
-        perror("Could not open file for reading");
-        exit(EXIT_FAILURE);
+        printf("could not open file");
+        exit(1);
     }
 
     if (fscanf(file, "%d", &nbvert) != 1) {
-        perror("Could not read number of vertices");
+        printf("error reading vertices");
         fclose(file);
-        exit(EXIT_FAILURE);
+        exit(1);
     }
 
     adj_list = create_empty_adjacency_list(nbvert);
@@ -24,7 +24,7 @@ adjacency_list *readGraph(const char *filename) {
         if (start >= 1 && start <= nbvert) {
             add_cell_to_list(&adj_list->lists[start - 1], end, proba);
         } else {
-            fprintf(stderr, "Invalid vertex number encountered: %d\n", start);
+            fprintf(stderr, "invalid vertex number: %d\n", start);
         }
     }
 
@@ -33,7 +33,6 @@ adjacency_list *readGraph(const char *filename) {
 }
 
 void is_markov_graph(adjacency_list *adj_list) {
-    printf("\nChecking if the graph is a Markov graph:\n");
     int is_markov = 1;
     for (int i = 0; i < adj_list->nb_vertices; i++) {
         float sum_probabilities = 0.0;
@@ -44,22 +43,21 @@ void is_markov_graph(adjacency_list *adj_list) {
         }
 
         if (fabs(sum_probabilities - 1.0) > 0.01) {
-            printf("The graph is not a Markov graph.\n");
-            printf("The sum of the probabilities of vertex %d is %.2f\n", i + 1, sum_probabilities);
+            printf("not a markov graph\n");
             is_markov = 0;
         }
     }
 
     if (is_markov) {
-        printf("The graph is a Markov graph.\n");
+        printf("markov graph\n");
     }
 }
 
 void generate_mermaid_file(adjacency_list *adj_list, const char *filename) {
     FILE *file = fopen(filename, "wt");
     if (file == NULL) {
-        perror("Could not open file for writing Mermaid graph");
-        exit(EXIT_FAILURE);
+        printf("could not create mermaid file\n");
+        exit(1);
     }
 
     fprintf(file, "---\n");
@@ -89,5 +87,5 @@ void generate_mermaid_file(adjacency_list *adj_list, const char *filename) {
     printf("DEBUG: 2\n");
 
     fclose(file);
-    printf("Mermaid graph generated successfully to %s\n", filename);
+    printf("mermaid file generated");
 }
