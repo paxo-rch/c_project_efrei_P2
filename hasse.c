@@ -67,7 +67,6 @@ void generate_mermaid_file(adjacency_list *adj_list, const char *filename) {
     fprintf(file, " look: neo\n");
     fprintf(file, "---\n");
     fprintf(file, "flowchart LR\n");
-    printf("DEBUG: 1\n");
 
     for (int i = 0; i < adj_list->nb_vertices; i++) {
         char *id = getID(i + 1);
@@ -84,8 +83,7 @@ void generate_mermaid_file(adjacency_list *adj_list, const char *filename) {
             current = current->next;
         }
     }
-    printf("DEBUG: 2\n");
 
     fclose(file);
-    printf("mermaid file generated");
+    printf("mermaid file generated\n");
 }
