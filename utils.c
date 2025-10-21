@@ -27,3 +27,52 @@ static char *getID(int i)
 
     return buffer;
 }
+cell create_cell(int arrival_vertex, float probability)
+{
+    cell new_cell;
+    new_cell.arrival_vertex = arrival_vertex;
+    new_cell.probability = probability;
+    new_cell.next_edge = NULL;
+    return new_cell;
+}
+plist create_list()
+{
+    plist new_list;
+    new_list.head = NULL;
+    return new_list;
+}
+void append_to_list(plist* list, cell new_cell)
+{
+    cell* new_node = (cell*)malloc(sizeof(cell));
+    if (!new_node)
+    {
+        fprintf(stderr, "Memory allocation failed\n");
+        exit(EXIT_FAILURE);
+    }
+    *new_node = new_cell;
+    new_node->next_edge = NULL;
+
+    if (list->head == NULL)
+    {
+        list->head = new_node;
+    }
+    else
+    {
+        cell* current = list->head;
+        while (current->next_edge != NULL)
+        {
+            current = current->next_edge;
+        }
+        current->next_edge = new_node;
+    }
+}
+void display_list(plist* list)
+{
+    cell* current = list->head;
+    while (current != NULL)
+    {
+        printf("-> (%s, %.2f) ", getID(current->arrival_vertex), current->probability);
+        current = current->next_edge;
+    }
+    printf("\n");
+}
