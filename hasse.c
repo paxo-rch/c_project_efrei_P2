@@ -24,7 +24,7 @@ adjacency_list *readGraph(const char *filename) {
         if (start >= 1 && start <= nbvert) {
             add_cell_to_list(&adj_list->lists[start - 1], end, proba);
         } else {
-            fprintf(stderr, "Invalid vertex number encountered: %d\n", start);
+            printf("Invalid vertex number encountered: %d\n", start);
         }
     }
 

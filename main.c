@@ -8,7 +8,7 @@ int main() {
     adjacency_list *graph = readGraph(filename);
 
     if (graph == NULL) {
-        fprintf(stderr, "Failed to read graph from %s\n", filename);
+        printf("Failed to read graph from %s\n", filename);
         return EXIT_FAILURE;
     }
 
