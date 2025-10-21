@@ -16,7 +16,7 @@ int main() {
 
     generate_mermaid_file(graph, "mermaid_graph.mmd");
 
-    for (int i = 0; i < graph->nb_vertices; i++) {
+    for (int i = 0; i < graph->nb_vertices; i++) {  // Free the whole graph
         cell *current = graph->lists[i].head;
         while (current != NULL) {
             cell *temp = current;
