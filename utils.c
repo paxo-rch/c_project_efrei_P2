@@ -76,3 +76,28 @@ void display_list(plist* list)
     }
     printf("\n");
 }
+void display_adjacency_list(adjacency_list* adj_list)
+{
+    for (int i = 0; i < adj_list->size; i++)
+    {
+        printf("%s: ", getID(i + 1));
+        cell* current = adj_list->edges[i];
+        while (current != NULL)
+        {
+            printf("-> (%s, %.2f) ", getID(current->arrival_vertex), current->probability);
+            current = current->next_edge;
+        }
+        printf("\n");
+    }
+}
+
+adjacency_list create_adjacency_list(int size)
+{
+    adjacency_list new_adj_list;
+    new_adj_list.size = size;
+    for (int i = 0; i < size; i++)
+    {
+        new_adj_list.edges[i] = create_list();
+    }
+    return new_adj_list;
+}
