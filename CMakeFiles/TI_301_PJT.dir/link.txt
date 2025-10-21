@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/TI_301_PJT.dir/link.d CMakeFiles/TI_301_PJT.dir/main.c.o CMakeFiles/TI_301_PJT.dir/utils.c.o CMakeFiles/TI_301_PJT.dir/hasse.c.o -o TI_301_PJT

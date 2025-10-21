@@ -69,24 +69,24 @@ void generate_mermaid_file(adjacency_list *adj_list, const char *filename) {
     fprintf(file, " look: neo\n");
     fprintf(file, "---\n");
     fprintf(file, "flowchart LR\n");
+    printf("DEBUG: 1\n");
 
     for (int i = 0; i < adj_list->nb_vertices; i++) {
-        char *id = getId(i + 1);
+        char *id = getID(i + 1);
         fprintf(file, "%s((%d))\n", id, i + 1);
-        free(id); 
     }
+
 
     for (int i = 0; i < adj_list->nb_vertices; i++) {
         cell *current = adj_list->lists[i].head;
-        char *from_id = getId(i + 1);
+        char *from_id = getID(i + 1);
         while (current != NULL) {
-            char *to_id = getId(current->arrival_vertex);
+            char *to_id = getID(current->arrival_vertex);
             fprintf(file, "%s -->|%.2f|%s\n", from_id, current->probability, to_id);
-            free(to_id);
             current = current->next;
         }
-        free(from_id); 
     }
+    printf("DEBUG: 2\n");
 
     fclose(file);
     printf("Mermaid graph generated successfully to %s\n", filename);

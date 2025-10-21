@@ -68,20 +68,26 @@ void display_adjacency_list(adjacency_list *adj_list) {
     }
 }
 
-char *getId(int num) {
-    char *id = (char *)malloc(sizeof(char) * 3);
-    if (id == NULL) {
-        perror("Failed to allocate memory for ID");
-        exit(EXIT_FAILURE);
+char *getID(int i)
+{
+    // translate from 1,2,3, .. ,500+ to A,B,C,..,Z,AA,AB,...
+    static char buffer[10];
+    char temp[10];
+    int index = 0;
+
+    i--; // Adjust to 0-based index
+    while (i >= 0)
+    {
+        temp[index++] = 'A' + (i % 26);
+        i = (i / 26) - 1;
     }
 
-    if (num <= 26) {
-        id[0] = 'A' + (num - 1);
-        id[1] = '\0';
-    } else {
-        id[0] = 'A' + ((num - 1) / 26) - 1;
-        id[1] = 'A' + ((num - 1) % 26);
-        id[2] = '\0';
+    // Reverse the string to get the correct order
+    for (int j = 0; j < index; j++)
+    {
+        buffer[j] = temp[index - j - 1];
     }
-    return id;
+    buffer[index] = '\0';
+
+    return buffer;
 }

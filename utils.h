@@ -18,6 +18,6 @@ cell *create_cell(int arrival_vertex, float probability);
 list *create_empty_list();
 void add_cell_to_list(list *l, int arrival_vertex, float probability);
 void display_list(list *l);
-char *getId(int num);
+char *getID(int i);
 
 #endif
