@@ -1,3 +1,4 @@
+#include "utils.h"
 #include "hasse.h"
 #include <stdio.h>
 #include <stdlib.h>

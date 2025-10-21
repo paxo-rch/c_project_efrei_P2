@@ -2,7 +2,7 @@
 #include "hasse.h"
 #include <math.h> 
 adjacency_list *readGraph(const char *filename) {
-    FILE *file = fopen(filename, "rt"); // read-only, text
+    FILE *file = fopen(filename, "rt");
     int nbvert, start, end;
     float proba;
     adjacency_list *adj_list = NULL;
