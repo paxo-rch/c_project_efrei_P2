@@ -27,19 +27,19 @@ static char *getID(int i)
 
     return buffer;
 }
-cell create_cell(int arrival_vertex, float probability)
+cell *create_cell(int arrival_vertex, float probability)
 {
     cell new_cell;
     new_cell.arrival_vertex = arrival_vertex;
     new_cell.probability = probability;
     new_cell.next_edge = NULL;
-    return new_cell;
+    return &new_cell;
 }
-plist create_list()
+plist *create_list()
 {
     plist new_list;
     new_list.head = NULL;
-    return new_list;
+    return &new_list;
 }
 void append_to_list(plist* list, cell new_cell)
 {
