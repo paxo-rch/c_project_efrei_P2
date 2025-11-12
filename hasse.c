@@ -24,11 +24,11 @@ adjacency_list *readGraph(const char *filename) {
         if (start >= 1 && start <= nbvert) {
             add_cell_to_list(&adj_list->lists[start - 1], end, proba);
         } else {
-            fprintf(stderr, "invalid vertex number: %d\n", start);
+            printf("invalid vertex number\n");
         }
     }
 
-    fclose(file);
+    close(file);
     return adj_list;
 }
 
@@ -60,18 +60,18 @@ void generate_mermaid_file(adjacency_list *adj_list, const char *filename) {
         exit(1);
     }
 
-    fprintf(file, "---\n");
-    fprintf(file, "config:\n");
-    fprintf(file, " layout: elk\n");
-    fprintf(file, " theme: neo\n");
-    fprintf(file, " look: neo\n");
-    fprintf(file, "---\n");
-    fprintf(file, "flowchart LR\n");
+    printf(file, "---\n");
+    printf(file, "config:\n");
+    printf(file, " layout: elk\n");
+    printf(file, " theme: neo\n");
+    printf(file, " look: neo\n");
+    printf(file, "---\n");
+    printf(file, "flowchart LR\n");
     printf("DEBUG: 1\n");
 
     for (int i = 0; i < adj_list->nb_vertices; i++) {
         char *id = getID(i + 1);
-        fprintf(file, "%s((%d))\n", id, i + 1);
+        printf(file, "%s((%d))\n", id, i + 1);
     }
 
 
@@ -80,7 +80,7 @@ void generate_mermaid_file(adjacency_list *adj_list, const char *filename) {
         char *from_id = getID(i + 1);
         while (current != NULL) {
             char *to_id = getID(current->arrival_vertex);
-            fprintf(file, "%s -->|%.2f|%s\n", from_id, current->probability, to_id);
+            printf(file, "%s -->|%.2f|%s\n", from_id, current->probability, to_id);
             current = current->next;
         }
     }
