@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "tarjan.h": "c",
+        "__locale": "c"
+    }
+}
