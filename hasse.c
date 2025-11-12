@@ -35,14 +35,14 @@ adjacency_list *readGraph(const char *filename) {
 void is_markov_graph(adjacency_list *adj_list) {
     int is_markov = 1;
     for (int i = 0; i < adj_list->nb_vertices; i++) {
-        float sum_probabilities = 0.0;
+        float sum = 0.0;
         cell *current = adj_list->lists[i].head;
         while (current != NULL) {
-            sum_probabilities += current->probability;
+            sum += current->probability;
             current = current->next;
         }
 
-        if (fabs(sum_probabilities - 1.0) > 0.01) {
+        if (fabs(sum - 1.0) > 0.01) {
             printf("not a markov graph\n");
             is_markov = 0;
         }
@@ -84,8 +84,7 @@ void generate_mermaid_file(adjacency_list *adj_list, const char *filename) {
             current = current->next;
         }
     }
-    printf("DEBUG: 2\n");
 
     fclose(file);
-    printf("mermaid file generated");
+    printf("mermaid file generated\n");
 }
