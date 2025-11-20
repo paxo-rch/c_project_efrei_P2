@@ -11,7 +11,7 @@ int main() {
     }
     t_tarjan_vertex** tarjan_graph = convert_tarjan(graph);
     graph_c out_tarjan = tarjan(tarjan_graph, graph);
-    adjacency_list* converted_graph = convert_hasse(tarjan_graph, out_tarjan->nb_vertices, graph);
+    adjacency_list* converted_graph = convert_hasse(tarjan_graph, out_tarjan.nb_vertices, graph);
 
     display_adjacency_list(converted_graph);
 

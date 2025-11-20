@@ -177,6 +177,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/main.c.s
 .PHONY : main.c.s
 
+tarjan.o: tarjan.c.o
+.PHONY : tarjan.o
+
+# target to build an object file
+tarjan.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/tarjan.c.o
+.PHONY : tarjan.c.o
+
+tarjan.i: tarjan.c.i
+.PHONY : tarjan.i
+
+# target to preprocess a source file
+tarjan.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/tarjan.c.i
+.PHONY : tarjan.c.i
+
+tarjan.s: tarjan.c.s
+.PHONY : tarjan.s
+
+# target to generate assembly for a file
+tarjan.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/tarjan.c.s
+.PHONY : tarjan.c.s
+
 utils.o: utils.c.o
 .PHONY : utils.o
 
@@ -216,6 +240,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... tarjan.o"
+	@echo "... tarjan.i"
+	@echo "... tarjan.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"
