@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include "hasse.h"
 #include "tarjan.h"
+
 int main() {
-    const char *filename = "data/exemple1.txt";
+    const char *filename = "data/exemple_hasse1.txt";
     adjacency_list *graph = readGraph(filename);
 
     if (graph == NULL) {
@@ -11,7 +12,7 @@ int main() {
     }
     t_tarjan_vertex** tarjan_graph = convert_tarjan(graph);
     graph_c out_tarjan = tarjan(tarjan_graph, graph);
-    adjacency_list* converted_graph = convert_hasse(tarjan_graph, out_tarjan.nb_vertices, graph);
+    adjacency_list* converted_graph = convert_hasse(&out_tarjan, graph);
 
     display_adjacency_list(converted_graph);
 

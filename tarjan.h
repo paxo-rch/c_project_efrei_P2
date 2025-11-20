@@ -44,9 +44,8 @@ void push(stack* s, t_tarjan_vertex* e);
 t_tarjan_vertex* pop(stack* s);
 
 t_tarjan_vertex** convert_tarjan(adjacency_list* list);
-adjacency_list* convert_hasse(graph_v g, int nb_vertices, adjacency_list* adj_list);
 
-void parse(t_tarjan_vertex* v, graph_v* g, graph_c graph, int num, stack* p, adjacency_list* adj_list);
+void parse(t_tarjan_vertex* v, graph_v* g, graph_c* graph, int* num, stack* p, adjacency_list* adj_list);
 graph_c tarjan(graph_v g, adjacency_list* adj_list);
 
 #endif
