@@ -6,6 +6,7 @@ TI_301_PJT: \
   CMakeFiles/TI_301_PJT.dir/utils.c.o \
   CMakeFiles/TI_301_PJT.dir/hasse.c.o \
   CMakeFiles/TI_301_PJT.dir/tarjan.c.o \
+  CMakeFiles/TI_301_PJT.dir/matrix.c.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/14/libgcc_s.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/libgcc_s.so \
@@ -41,6 +42,8 @@ CMakeFiles/TI_301_PJT.dir/utils.c.o:
 CMakeFiles/TI_301_PJT.dir/hasse.c.o:
 
 CMakeFiles/TI_301_PJT.dir/tarjan.c.o:
+
+CMakeFiles/TI_301_PJT.dir/matrix.c.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a:
 

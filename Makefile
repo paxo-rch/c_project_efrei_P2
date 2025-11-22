@@ -177,6 +177,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/main.c.s
 .PHONY : main.c.s
 
+matrix.o: matrix.c.o
+.PHONY : matrix.o
+
+# target to build an object file
+matrix.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/matrix.c.o
+.PHONY : matrix.c.o
+
+matrix.i: matrix.c.i
+.PHONY : matrix.i
+
+# target to preprocess a source file
+matrix.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/matrix.c.i
+.PHONY : matrix.c.i
+
+matrix.s: matrix.c.s
+.PHONY : matrix.s
+
+# target to generate assembly for a file
+matrix.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/matrix.c.s
+.PHONY : matrix.c.s
+
 tarjan.o: tarjan.c.o
 .PHONY : tarjan.o
 
@@ -240,6 +264,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... matrix.o"
+	@echo "... matrix.i"
+	@echo "... matrix.s"
 	@echo "... tarjan.o"
 	@echo "... tarjan.i"
 	@echo "... tarjan.s"
