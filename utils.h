@@ -5,13 +5,13 @@
 #include <stdlib.h>
 
 typedef struct cell {
-    int arrival_vertex;
-    float probability;
-    struct cell* next;
+  int arrival_vertex;
+  float probability;
+  struct cell *next;
 } cell;
 
 typedef struct list {
-    struct cell* head;
+  struct cell *head;
 } list;
 
 cell *create_cell(int arrival_vertex, float probability);

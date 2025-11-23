@@ -4,7 +4,8 @@
 #include "hasse.h"
 #include "tarjan.h"
 
-typedef struct t_matrix {
+typedef struct t_matrix
+{
   int sx;
   int sy;
   float **data;

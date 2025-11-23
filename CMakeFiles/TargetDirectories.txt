@@ -1,3 +1,6 @@
 /home/gabriel/Documents/c_project/CMakeFiles/TI_301_PJT.dir
+/home/gabriel/Documents/c_project/CMakeFiles/part1.dir
+/home/gabriel/Documents/c_project/CMakeFiles/part2.dir
+/home/gabriel/Documents/c_project/CMakeFiles/part3.dir
 /home/gabriel/Documents/c_project/CMakeFiles/edit_cache.dir
 /home/gabriel/Documents/c_project/CMakeFiles/rebuild_cache.dir

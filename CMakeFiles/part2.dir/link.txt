@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/part2.dir/link.d CMakeFiles/part2.dir/main2.c.o CMakeFiles/part2.dir/utils.c.o CMakeFiles/part2.dir/hasse.c.o CMakeFiles/part2.dir/tarjan.c.o -o part2

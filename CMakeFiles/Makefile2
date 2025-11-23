@@ -64,10 +64,16 @@ CMAKE_BINARY_DIR = /home/gabriel/Documents/c_project
 
 # The main recursive "all" target.
 all: CMakeFiles/TI_301_PJT.dir/all
+all: CMakeFiles/part1.dir/all
+all: CMakeFiles/part2.dir/all
+all: CMakeFiles/part3.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/TI_301_PJT.dir/codegen
+codegen: CMakeFiles/part1.dir/codegen
+codegen: CMakeFiles/part2.dir/codegen
+codegen: CMakeFiles/part3.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -76,6 +82,9 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/TI_301_PJT.dir/clean
+clean: CMakeFiles/part1.dir/clean
+clean: CMakeFiles/part2.dir/clean
+clean: CMakeFiles/part3.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -109,6 +118,102 @@ CMakeFiles/TI_301_PJT.dir/codegen:
 CMakeFiles/TI_301_PJT.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/clean
 .PHONY : CMakeFiles/TI_301_PJT.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/part1.dir
+
+# All Build rule for target.
+CMakeFiles/part1.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part1.dir/build.make CMakeFiles/part1.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part1.dir/build.make CMakeFiles/part1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/gabriel/Documents/c_project/CMakeFiles --progress-num=7,8,9,10 "Built target part1"
+.PHONY : CMakeFiles/part1.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/part1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/Documents/c_project/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/part1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/Documents/c_project/CMakeFiles 0
+.PHONY : CMakeFiles/part1.dir/rule
+
+# Convenience name for target.
+part1: CMakeFiles/part1.dir/rule
+.PHONY : part1
+
+# codegen rule for target.
+CMakeFiles/part1.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part1.dir/build.make CMakeFiles/part1.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/gabriel/Documents/c_project/CMakeFiles --progress-num=7,8,9,10 "Finished codegen for target part1"
+.PHONY : CMakeFiles/part1.dir/codegen
+
+# clean rule for target.
+CMakeFiles/part1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part1.dir/build.make CMakeFiles/part1.dir/clean
+.PHONY : CMakeFiles/part1.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/part2.dir
+
+# All Build rule for target.
+CMakeFiles/part2.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/gabriel/Documents/c_project/CMakeFiles --progress-num=11,12,13,14,15 "Built target part2"
+.PHONY : CMakeFiles/part2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/part2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/Documents/c_project/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/part2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/Documents/c_project/CMakeFiles 0
+.PHONY : CMakeFiles/part2.dir/rule
+
+# Convenience name for target.
+part2: CMakeFiles/part2.dir/rule
+.PHONY : part2
+
+# codegen rule for target.
+CMakeFiles/part2.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/gabriel/Documents/c_project/CMakeFiles --progress-num=11,12,13,14,15 "Finished codegen for target part2"
+.PHONY : CMakeFiles/part2.dir/codegen
+
+# clean rule for target.
+CMakeFiles/part2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/clean
+.PHONY : CMakeFiles/part2.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/part3.dir
+
+# All Build rule for target.
+CMakeFiles/part3.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/gabriel/Documents/c_project/CMakeFiles --progress-num=16,17,18,19,20,21 "Built target part3"
+.PHONY : CMakeFiles/part3.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/part3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/Documents/c_project/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/part3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/Documents/c_project/CMakeFiles 0
+.PHONY : CMakeFiles/part3.dir/rule
+
+# Convenience name for target.
+part3: CMakeFiles/part3.dir/rule
+.PHONY : part3
+
+# codegen rule for target.
+CMakeFiles/part3.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/gabriel/Documents/c_project/CMakeFiles --progress-num=16,17,18,19,20,21 "Finished codegen for target part3"
+.PHONY : CMakeFiles/part3.dir/codegen
+
+# clean rule for target.
+CMakeFiles/part3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/clean
+.PHONY : CMakeFiles/part3.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

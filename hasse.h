@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include "utils.h"
 
-typedef struct adjacency_list {
+typedef struct adjacency_list
+{
     int nb_vertices;
     list *lists;
 } adjacency_list;

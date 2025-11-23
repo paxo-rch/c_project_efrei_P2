@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 int main() {
-  const char *filename = "data/exemple_hasse1.txt";
+  const char *filename = "data/exemple_meteo.txt";
   adjacency_list *graph = readGraph(filename);
 
   if (graph == NULL) {
@@ -12,15 +12,14 @@ int main() {
     return 1;
   }
 
-  printf("=== Part 2: Tarjan Algorithm ===\n");
-  printf("Original graph:\n");
+  printf("Part 2: Tarjan\n");
+  printf("Loaded graph:\n");
   display_adjacency_list(graph);
 
-  // Run Tarjan algorithm to find SCCs
   t_tarjan_vertex **tarjan_graph = convert_tarjan(graph);
   graph_c partition = tarjan(tarjan_graph, graph);
 
-  printf("\nFound %d strongly connected components:\n", partition.nb_vertices);
+  printf("there are %d SCC:\n", partition.nb_vertices);
   for (int i = 0; i < partition.nb_vertices; i++) {
     printf("SCC %d: {", i + 1);
     for (int j = 0; j < partition.list[i].nb_vertices; j++) {
@@ -28,12 +27,11 @@ int main() {
       if (j < partition.list[i].nb_vertices - 1)
         printf(", ");
     }
-    printf("}\n");
+    printf("}\n\n");
   }
 
-  printf("\n=== Part 3: Matrix Operations ===\n");
+  printf("Part 3: Matrix\n");
 
-  // Step 1: Create matrix from adjacency list
   t_matrix M = newMatrixFromAdj(graph);
   printf("\nTransition Matrix M:\n");
   displayMatrix(M);
@@ -80,7 +78,7 @@ int main() {
   displayMatrix(M_n);
 
   // Step 2: Calculate stationary distribution for each SCC
-  printf("\n=== Step 2: Stationary Distributions per SCC ===\n");
+  printf("\n- Step 2: Stationary Distributions per SCC -\n");
   for (int i = 0; i < partition.nb_vertices; i++) {
     if (partition.list[i].nb_vertices > 1 ||
         M.data[partition.list[i].list[0]->id][partition.list[i].list[0]->id] >
