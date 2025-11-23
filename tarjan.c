@@ -1,6 +1,9 @@
 #include "tarjan.h"
 
 t_tarjan_vertex** convert_tarjan(adjacency_list* list)
+/*
+This function converts a adjacency list into a tarjan graph.
+*/
 {
     t_tarjan_vertex** vertices = malloc(sizeof(t_tarjan_vertex*) * list->nb_vertices);
 
@@ -21,6 +24,9 @@ t_tarjan_vertex* pop(stack* s) { return s->stack[--s->len]; }
 
 
 void parse(t_tarjan_vertex* v, graph_v* g, graph_c* graph, int* num, stack* p, adjacency_list* adj_list)
+/*
+This function parse the graph recursively to find the SCC.
+*/
 {
     v->number = *num;
     v->accessible_number = *num;
@@ -32,7 +38,6 @@ void parse(t_tarjan_vertex* v, graph_v* g, graph_c* graph, int* num, stack* p, a
     struct cell* cur = adj_list->lists[v->id].head;
     while (cur != NULL)
     {
-        // Adjust 1-based index from adjacency list to 0-based index for array access
         int neighbor_idx = cur->arrival_vertex - 1;
         
         if (neighbor_idx < 0 || neighbor_idx >= adj_list->nb_vertices) {
@@ -82,6 +87,9 @@ void parse(t_tarjan_vertex* v, graph_v* g, graph_c* graph, int* num, stack* p, a
 }
 
 graph_c tarjan(graph_v g, adjacency_list* adj_list)
+/*
+This function implement the tarjan algorithm to find the SCC.
+*/
 {
     int n = 0;
     stack p = {0};

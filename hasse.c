@@ -1,13 +1,15 @@
 #include "hasse.h"
 #include <malloc.h>
-#include <math.h>
-
-adjacency_list *readGraph(const char *filename)
-{
-  FILE *file = fopen(filename, "rt");
-  int nbvert, start, end;
-  float proba;
-  adjacency_list *adj_list = NULL;
+#include "hasse.h"
+#include <math.h> 
+adjacency_list *readGraph(const char *filename) {
+    /*
+    This Function reads a graph from a file and build the adjacency list.
+    */
+    FILE *file = fopen(filename, "rt");
+    int nbvert, start, end;
+    float proba;
+    adjacency_list *adj_list = NULL;
 
   if (file == NULL)
   {
@@ -40,18 +42,19 @@ adjacency_list *readGraph(const char *filename)
   return adj_list;
 }
 
-void is_markov_graph(adjacency_list *adj_list)
-{
-  int is_markov = 1;
-  for (int i = 0; i < adj_list->nb_vertices; i++)
-  {
-    float sum = 0.0;
-    cell *current = adj_list->lists[i].head;
-    while (current != NULL)
-    {
-      sum += current->probability;
-      current = current->next;
-    }
+void is_markov_graph(adjacency_list *adj_list) {
+    /*
+    This function check if the graph inputed is a markov graph
+    by verifying that the sum of probabilities of outgoing edges is equal to 1.
+    */
+    int is_markov = 1;
+    for (int i = 0; i < adj_list->nb_vertices; i++) {
+        float sum = 0.0;
+        cell *current = adj_list->lists[i].head;
+        while (current != NULL) {
+            sum += current->probability;
+            current = current->next;
+        }
 
     if (fabs(sum - 1.0) > 0.01)
     {
@@ -68,12 +71,14 @@ void is_markov_graph(adjacency_list *adj_list)
 
 void generate_mermaid_file(adjacency_list *adj_list, const char *filename)
 {
-  FILE *file = fopen(filename, "wt");
-  if (file == NULL)
-  {
-    printf("could not create mermaid file\n");
-    exit(1);
-  }
+    /*
+    This function generate the mermaid file corresponding to the inputed graph.
+    */
+    FILE *file = fopen(filename, "wt");
+    if (file == NULL) {
+        printf("could not create mermaid file\n");
+        exit(1);
+    }
 
   fprintf(file, "---\n");
   fprintf(file, "config:\n");

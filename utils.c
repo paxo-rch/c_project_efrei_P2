@@ -6,6 +6,9 @@
 
 cell *create_cell(int arrival_vertex, float probability)
 {
+/*
+This function creates a new cell from an arrival vertex and probability.
+*/
   cell *new_cell = (cell *)malloc(sizeof(cell));
   if (new_cell == NULL)
   {
@@ -20,6 +23,9 @@ cell *create_cell(int arrival_vertex, float probability)
 
 list *create_empty_list()
 {
+    /*
+    This function creates an empty list.
+    */
   list *new_list = (list *)malloc(sizeof(list));
   if (new_list == NULL)
   {
@@ -32,6 +38,9 @@ list *create_empty_list()
 
 void add_cell_to_list(list *l, int arrival_vertex, float probability)
 {
+    /*
+    This function adds a cell to a list.
+    */
   cell *new_cell = create_cell(arrival_vertex, probability);
   new_cell->next = l->head;
   l->head = new_cell;
@@ -39,6 +48,9 @@ void add_cell_to_list(list *l, int arrival_vertex, float probability)
 
 void display_list(list *l)
 {
+    /*
+    This function displays a list.
+    */
   cell *current = l->head;
   while (current != NULL)
   {
@@ -50,6 +62,9 @@ void display_list(list *l)
 
 adjacency_list *create_empty_adjacency_list(int nb_vertices)
 {
+    /*
+    This function creates an empty adjacency list with a given number of vertices.
+    */
   adjacency_list *adj_list = (adjacency_list *)malloc(sizeof(adjacency_list));
   if (adj_list == NULL)
   {
@@ -73,6 +88,9 @@ adjacency_list *create_empty_adjacency_list(int nb_vertices)
 
 void display_adjacency_list(adjacency_list *adj_list)
 {
+    /*
+    This function displays the adjacency list.
+    */
   printf("Adjacency List:\n");
   for (int i = 0; i < adj_list->nb_vertices; i++)
   {
