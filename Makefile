@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TI_301_PJT
-
-# Build rule for target.
-TI_301_PJT: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TI_301_PJT
-.PHONY : TI_301_PJT
-
-# fast build rule for target.
-TI_301_PJT/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/build
-.PHONY : TI_301_PJT/fast
-
-#=============================================================================
 # Target rules for targets named part1
 
 # Build rule for target.
@@ -173,7 +160,6 @@ hasse.o: hasse.c.o
 
 # target to build an object file
 hasse.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/hasse.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part1.dir/build.make CMakeFiles/part1.dir/hasse.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/hasse.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/hasse.c.o
@@ -184,7 +170,6 @@ hasse.i: hasse.c.i
 
 # target to preprocess a source file
 hasse.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/hasse.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part1.dir/build.make CMakeFiles/part1.dir/hasse.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/hasse.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/hasse.c.i
@@ -195,35 +180,10 @@ hasse.s: hasse.c.s
 
 # target to generate assembly for a file
 hasse.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/hasse.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part1.dir/build.make CMakeFiles/part1.dir/hasse.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/hasse.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/hasse.c.s
 .PHONY : hasse.c.s
-
-main.o: main.c.o
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/main.c.s
-.PHONY : main.c.s
 
 main1.o: main1.c.o
 .PHONY : main1.o
@@ -302,7 +262,6 @@ matrix.o: matrix.c.o
 
 # target to build an object file
 matrix.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/matrix.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/matrix.c.o
 .PHONY : matrix.c.o
 
@@ -311,7 +270,6 @@ matrix.i: matrix.c.i
 
 # target to preprocess a source file
 matrix.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/matrix.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/matrix.c.i
 .PHONY : matrix.c.i
 
@@ -320,7 +278,6 @@ matrix.s: matrix.c.s
 
 # target to generate assembly for a file
 matrix.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/matrix.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/matrix.c.s
 .PHONY : matrix.c.s
 
@@ -329,7 +286,6 @@ tarjan.o: tarjan.c.o
 
 # target to build an object file
 tarjan.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/tarjan.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/tarjan.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/tarjan.c.o
 .PHONY : tarjan.c.o
@@ -339,7 +295,6 @@ tarjan.i: tarjan.c.i
 
 # target to preprocess a source file
 tarjan.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/tarjan.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/tarjan.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/tarjan.c.i
 .PHONY : tarjan.c.i
@@ -349,7 +304,6 @@ tarjan.s: tarjan.c.s
 
 # target to generate assembly for a file
 tarjan.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/tarjan.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/tarjan.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/tarjan.c.s
 .PHONY : tarjan.c.s
@@ -359,7 +313,6 @@ utils.o: utils.c.o
 
 # target to build an object file
 utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/utils.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part1.dir/build.make CMakeFiles/part1.dir/utils.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/utils.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/utils.c.o
@@ -370,7 +323,6 @@ utils.i: utils.c.i
 
 # target to preprocess a source file
 utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/utils.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part1.dir/build.make CMakeFiles/part1.dir/utils.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/utils.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/utils.c.i
@@ -381,7 +333,6 @@ utils.s: utils.c.s
 
 # target to generate assembly for a file
 utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TI_301_PJT.dir/build.make CMakeFiles/TI_301_PJT.dir/utils.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part1.dir/build.make CMakeFiles/part1.dir/utils.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/utils.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part3.dir/build.make CMakeFiles/part3.dir/utils.c.s
@@ -395,16 +346,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TI_301_PJT"
 	@echo "... part1"
 	@echo "... part2"
 	@echo "... part3"
 	@echo "... hasse.o"
 	@echo "... hasse.i"
 	@echo "... hasse.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... main1.o"
 	@echo "... main1.i"
 	@echo "... main1.s"
